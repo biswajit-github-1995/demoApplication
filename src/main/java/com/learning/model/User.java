@@ -2,8 +2,6 @@ package com.learning.model;
 
 import java.util.Date;
 
-import com.learning.dto.UserDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -46,21 +44,6 @@ public class User {
 
 	@Column(name = "updated_by")
 	private String updatedBy;
-
-	public User() {
-	}
-
-	public User(UserDTO user) {
-		this.userName = user.getUserName();
-		this.firstName = user.getFirstName();
-		this.lastName = user.getLastName();
-		this.email = user.getEmail();
-		this.phoneNo = user.getPhoneNo();
-		this.createdOn = new Date();
-		this.createdBy = user.getCreatedBy();
-		this.updatedOn = new Date();
-		this.updatedBy = user.getUpdatedBy();
-	}
 
 	public Long getUserId() {
 		return userId;

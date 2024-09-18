@@ -6,6 +6,6 @@ public interface UserService {
 
 	UserDTO getUserDetailsById(Long userId) throws Exception;
 
-	UserDTO saveUserDetailsById(UserDTO userDTO);
+	UserDTO saveUpdateUserDetails(UserDTO userDTO);
 
 }

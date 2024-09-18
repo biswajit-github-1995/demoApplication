@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "0098615e-ea2d-42c9-8379-cbc5acbe3b22",
+		"name": "demoApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38407396"
+	},
+	"item": [
+		{
+			"name": "homePage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/myDemoApp/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"myDemoApp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUser by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/myDemoApp/user/findById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"myDemoApp",
+						"user",
+						"findById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/myDemoApp/user/save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"biswajit43\",\r\n    \"firstName\":\"Dolphin\",\r\n    \"lastName\":\"behera\",\r\n    \"email\":\"dolphin@gmail.com\",\r\n    \"phoneNo\":9898987890,\r\n    \"createdBy\":\"ADMIN\",\r\n    \"updatedBy\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/myDemoApp/user/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"myDemoApp",
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

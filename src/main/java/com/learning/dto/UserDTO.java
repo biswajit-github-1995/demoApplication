@@ -1,5 +1,7 @@
 package com.learning.dto;
 
+import java.util.Date;
+
 import com.learning.model.User;
 
 public class UserDTO {
@@ -10,9 +12,9 @@ public class UserDTO {
 	private String lastName;
 	private String email;
 	private Long phoneNo;
-	private String createdOn;
+	private Date createdOn;
 	private String createdBy;
-	private String updatedOn;
+	private Date updatedOn;
 	private String updatedBy;
 
 	public UserDTO() {
@@ -81,11 +83,11 @@ public class UserDTO {
 		this.phoneNo = phoneNo;
 	}
 
-	public String getCreatedOn() {
+	public Date getCreatedOn() {
 		return createdOn;
 	}
 
-	public void setCreatedOn(String createdOn) {
+	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 
@@ -97,11 +99,11 @@ public class UserDTO {
 		this.createdBy = createdBy;
 	}
 
-	public String getUpdatedOn() {
+	public Date getUpdatedOn() {
 		return updatedOn;
 	}
 
-	public void setUpdatedOn(String updatedOn) {
+	public void setUpdatedOn(Date updatedOn) {
 		this.updatedOn = updatedOn;
 	}
 

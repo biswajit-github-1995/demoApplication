@@ -27,10 +27,15 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO saveUserDetailsById(UserDTO userDTO) {
-		User user = new User(userDTO);
-		user = userRepository.save(user);
-		user = userRepository.findById(user.getUserId()).get();
-		return new UserDTO(user);
+		try {
+			User user = new User(userDTO);
+			user = userRepository.save(user);
+			user = userRepository.findById(user.getUserId()).get();
+			return new UserDTO(user);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new UserDTO();
+		}
 	}
 
 }

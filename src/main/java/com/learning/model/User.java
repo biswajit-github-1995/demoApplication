@@ -1,19 +1,18 @@
 package com.learning.model;
 
+import java.util.Date;
+
+import com.learning.dto.UserDTO;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.util.Date;
-
-import com.learning.dto.UserDTO;
-
-import jakarta.persistence.Column;
-
 @Entity
-@Table(name = "user")
+@Table(name = "user_details")
 public class User {
 
 	@Id
@@ -37,13 +36,13 @@ public class User {
 	private Long phoneNo;
 
 	@Column(name = "created_on")
-	private String createdOn;
+	private Date createdOn;
 
 	@Column(name = "created_by")
 	private String createdBy;
 
 	@Column(name = "updated_on")
-	private String updatedOn;
+	private Date updatedOn;
 
 	@Column(name = "updated_by")
 	private String updatedBy;
@@ -57,9 +56,9 @@ public class User {
 		this.lastName = user.getLastName();
 		this.email = user.getEmail();
 		this.phoneNo = user.getPhoneNo();
-		this.createdOn = new Date().toString();
+		this.createdOn = new Date();
 		this.createdBy = user.getCreatedBy();
-		this.updatedOn = new Date().toString();
+		this.updatedOn = new Date();
 		this.updatedBy = user.getUpdatedBy();
 	}
 
@@ -111,11 +110,11 @@ public class User {
 		this.phoneNo = phoneNo;
 	}
 
-	public String getCreatedOn() {
+	public Date getCreatedOn() {
 		return createdOn;
 	}
 
-	public void setCreatedOn(String createdOn) {
+	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 
@@ -127,11 +126,11 @@ public class User {
 		this.createdBy = createdBy;
 	}
 
-	public String getUpdatedOn() {
+	public Date getUpdatedOn() {
 		return updatedOn;
 	}
 
-	public void setUpdatedOn(String updatedOn) {
+	public void setUpdatedOn(Date updatedOn) {
 		this.updatedOn = updatedOn;
 	}
 
